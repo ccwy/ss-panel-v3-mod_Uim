@@ -157,7 +157,7 @@ class UserController extends AdminController
         if ($request->getParam('pass') != '') {
             $user->pass = Hash::passwordHash($request->getParam('pass'));
             Wecenter::ChangeUserName($email1, $email2, $request->getParam('pass'), $user->user_name);
-            $user->clean_link();
+            
         }
 
         $user->auto_reset_day =  $request->getParam('auto_reset_day');
