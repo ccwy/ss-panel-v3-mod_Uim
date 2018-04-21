@@ -1041,7 +1041,7 @@ class UserController extends BaseController
         $user->pass = $hashPwd;
         $user->save();
 
-        $user->clean_link();
+        
 
         $res['ret'] = 1;
         $res['msg'] = "修改成功";
